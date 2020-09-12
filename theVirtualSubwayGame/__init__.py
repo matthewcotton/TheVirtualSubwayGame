@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from theVirtualSubwayGame.flaskSecretKey import get_api_key
+from theVirtualSubwayGame.flaskSecretKey import get_flask_key
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = get_flask_key()
