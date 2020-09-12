@@ -1,8 +1,9 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from theVirtualSubwayGame.flaskSecretKey import get_api_key
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '726233f6c6f24e2cc6a289dacd99ca0b'
+app.config['SECRET_KEY'] = get_flask_key()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///stations.db'
 db = SQLAlchemy(app)
 
