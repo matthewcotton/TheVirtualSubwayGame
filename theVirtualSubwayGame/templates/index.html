@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <p class="col description">Inspired by the Subway Game as explained in Nicholas Pashley's
+            <span id="name">"Notes on a Beermat Drinking and Why It's Necessary".</span>
+            and the current pandemic. This is a virtual version of the Subway Game for those
+            of us that surely miss discovering a new pub.</p>
+    </div>
+    <div class="row">
+        <p class="col instructions">Click on one of the transport networks below to discover a new pub at a
+            randomly selected station or stop.</p>
+    </div>
+
+    <div class="row align-items-end">
+        <div class="transit col-sm" id="ttc">
+            <a href="/ttc">
+                <img src="{{ url_for('static', filename='ttc-logo_11150111.png') }}" class="img-fluid" alt="TTC">
+                <h2>Toronto</h2>
+            </a>
+        </div>
+        <div class="transit col-sm img-fluid" id="tube">
+            <a href="/tube">
+                <img src="{{ url_for('static', filename='Underground.svg') }}" class="img-fluid" alt="The Tube">
+                <h2>London</h2>
+            </a>
+        </div>
+        <div class="transit col-sm img-fluid" id="supertram">
+            <a href="/supertram">
+                <img src="{{ url_for('static', filename='stagecoach-supertram-vector-logo.svg') }}" class="img-fluid" alt="Supertram">
+                <h2>Sheffield</h2>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
